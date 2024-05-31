@@ -1,7 +1,8 @@
 let query = location.search;
+console.log(query);
 let queryStringObj = new URLSearchParams(query);
 let id = queryStringObj.get("id");
-
+console.log(id);
 fetch (`https://rickandmortyapi.com/api/character/${id}`)
     .then (function(response){
         return response .json();
